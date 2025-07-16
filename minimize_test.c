@@ -150,7 +150,7 @@ static void set_minimize_pos(GtkWidget *btn)
 	gtk_widget_get_allocation(btn, &area);
 	int w = area.width;
 	if(btnw) w = (int)gtk_spin_button_get_value(GTK_SPIN_BUTTON(btnw));
-	zwlr_foreign_toplevel_handle_v1_set_rectangle(child_handle, surface, area.x, area.y, w, 1);// area.width, area.height);
+	zwlr_foreign_toplevel_handle_v1_set_rectangle(child_handle, surface, area.x, area.y, w, w);
 }
 
 static void toggle_min(void)
